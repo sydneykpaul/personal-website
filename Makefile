@@ -10,7 +10,7 @@ clean:
 .PHONY: get_repository
 get_repository:
 	@echo "Getting public repository"
-	git clone https://github.com/sydneykpaul/sydneykpaul.github.io.git publi
+	git clone https://github.com/sydneykpaul/sydneykpaul.github.io.git public
 .PHONY: build
 build:
 	@echo "Generating site"
