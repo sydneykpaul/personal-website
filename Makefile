@@ -21,7 +21,7 @@ deploy:
 	@cd $(OUTPUTDIR) \
 	 && git config user.email "sydneytheengineer@gmail.com" \
 	 && git config user.name "Sydney Paul" \
-	 && git add . \
+	 && git add -A . \
 	 && git status \
 	 && git commit -m "Deploy via Makefile" \
 	 && git push -f -q https://$(GITHUB_TOKEN)@github.com/sydneykpaul/sydneykpaul.github.io.git master
