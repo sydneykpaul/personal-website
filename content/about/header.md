@@ -47,8 +47,14 @@ subtitle = ""
  css_class = ""
 +++
 
-I am an engineer based in Bothell, WA with experience in software and hardware development. My most recent adventure was developing new artificial limb technologies as a Research Scientist/Engineer. It was after this experience that I discovered a new field that would combine my love of mathematics with my programming and communication skills. 
+Creative and hardworking Data Science graduate student at the University of Notre Dame with 3 years experience in software engineering. Driven by a strong sense of curiosity, I love a good challenge or puzzle, and believe that there is always more to learn. Seeking to use my software engineering experience, passion for mathematics, and communication skills in an enriching full-time position as a Data Scientist. 
 
-To that end I am currently pursing my master's degree in Data Science at the University of Notre Dame. 
+Top Skills:
 
-I thrive in a creative environment where I can solve problems and puzzles. If you would like to learn more about me or my work, please contact me at SydneyTheEngineer@gmail.com 
+&check;  R, Python, Java, C, C#, MATLAB  
+&check;  SQL, Hadoop, AWS, Tableau  
+&check;  Statistics, calculus, linear algebra  
+&check;  Machine learning, predictive analytics  
+&check;  Data cleaning, analysis, modeling, visualization  
+
+If you would like to learn more about me or my work, please contact me at SydneyTheEngineer@gmail.com or check out my GitHub, https://github.com/sydneykpaul/. 

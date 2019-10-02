@@ -1,11 +1,15 @@
 ---
-date: "2016-04-27T00:00:00Z"
-external_link: http://example.org
+date: "2019-07-25T00:00:00Z"
+external_link: https://github.com/sydneykpaul/SPC_Shiny_App
 image:
-  caption: Photo by Toa Heftiba on Unsplash
+  caption: UI for SPC ShinyApp
   focal_point: Smart
-summary: An example of linking directly to an external project website using `external_link`.
+summary: Shiny application that walks a user through good SPC practices.
 tags:
-- Demo
-title: External Project
+- R
+- shiny
+- SPC
+- education
+
+title: Statistical Process Control R Shiny App
 ---

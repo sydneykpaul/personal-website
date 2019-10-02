@@ -27,11 +27,9 @@ subtitle = ""
   description = ""  
   
 [[feature]]
-  icon = "camera-retro"
-  icon_pack = "fas"
-  name = "Photography"
+  icon = "python"
+  icon_pack = "fab"
+  name = "Python"
   description = ""
 
 +++
-
-python, C/C#, Java, 

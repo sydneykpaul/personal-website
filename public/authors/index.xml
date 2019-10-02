@@ -7,7 +7,7 @@
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Sydney K Paul {year}</copyright>
-    <lastBuildDate>Sun, 07 Apr 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 01 Oct 2019 00:00:00 +0000</lastBuildDate>
     
 	    <atom:link href="/authors/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,23 +15,33 @@
     <item>
       <title></title>
       <link>/authors/admin/</link>
-      <pubDate>Sun, 07 Apr 2019 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 01 Oct 2019 00:00:00 +0000</pubDate>
       
       <guid>/authors/admin/</guid>
-      <description>&lt;p&gt;I am an engineer based in Bothell, WA with experience in software and hardware development. My most recent adventure was developing new artificial limb technologies as a Research Scientist/Engineer. It was after this experience that I discovered a new field that would combine my love of mathematics with my programming and communication skills.&lt;/p&gt;
+      <description>&lt;p&gt;Creative and hardworking Data Science graduate student at the University of Notre Dame with 3 years experience in software engineering. Driven by a strong sense of curiosity, I love a good challenge or puzzle, and believe that there is always more to learn. Seeking to use my software engineering experience, passion for mathematics, and communication skills in an enriching full-time position as a Data Scientist.&lt;/p&gt;
 
-&lt;p&gt;To that end I am currently pursing my master&amp;rsquo;s degree in Data Science at the University of Notre Dame.&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
 
-&lt;p&gt;I thrive in a creative environment where I can solve problems and puzzles. If you would like to learn more about me or my work, please contact me at SydneyTheEngineer@gmail.com&lt;/p&gt;
+&lt;p&gt;Top Skills:&lt;/p&gt;
+
+&lt;p&gt;&amp;check;  R, Python, Java, C, C#, MATLAB&lt;br /&gt;
+&amp;check;  SQL, Hadoop, AWS, Tableau&lt;br /&gt;
+&amp;check;  Statistics, calculus, linear algebra&lt;br /&gt;
+&amp;check;  Machine learning, predictive analytics&lt;br /&gt;
+&amp;check;  Data cleaning, analysis, modeling, visualization&lt;/p&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;If you would like to learn more about me or my work, please contact me at SydneyTheEngineer@gmail.com or check out my GitHub, &lt;a href=&#34;https://github.com/sydneykpaul/&#34; target=&#34;_blank&#34;&gt;https://github.com/sydneykpaul/&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     
     <item>
-      <title>Robert Ford</title>
-      <link>/authors/robert-ford/</link>
-      <pubDate>Tue, 01 Sep 2015 00:00:00 +0000</pubDate>
+      <title>Dwight Barry, Brendan Bettinger, Andrew Cooper</title>
+      <link>/authors/dwight-barry-brendan-bettinger-andrew-cooper/</link>
+      <pubDate>Sun, 07 Apr 2019 00:00:00 +0000</pubDate>
       
-      <guid>/authors/robert-ford/</guid>
+      <guid>/authors/dwight-barry-brendan-bettinger-andrew-cooper/</guid>
       <description></description>
     </item>
     
