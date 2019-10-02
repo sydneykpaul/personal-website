@@ -19,5 +19,5 @@ title: My first blog post
 
 This is a work in progress. I intend to use it to document fun projects, interesting tidbits I come across, and other miscellanea. I might write some tutorials on various data science topics as well. 
 
-This is written in Rmarkdown and can include code chunks and interactive plots.
+This is written in R Markdown and can include code chunks and interactive plots.
 
