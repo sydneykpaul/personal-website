@@ -10,7 +10,7 @@ clean:
 .PHONY: get_repository
 get_repository:
 	@echo "Getting public repository"
-	git clone https://github.com/sydneykpaul/sydneykpaul.github.io.git public
+	git clone https://github.com/sydneykpaul/sydneykpaul.github.io.git publi
 .PHONY: build
 build:
 	@echo "Generating site"
@@ -21,7 +21,8 @@ deploy:
 	@cd $(OUTPUTDIR) \
 	 && git config user.email "sydneytheengineer@gmail.com" \
 	 && git config user.name "Sydney Paul" \
-	 && git add -A . \
+	 && git add . \
+	 && git add -u . \
 	 && git status \
 	 && git commit -m "Deploy via Makefile" \
 	 && git push -f -q https://$(GITHUB_TOKEN)@github.com/sydneykpaul/sydneykpaul.github.io.git master
