@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.3.1">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Sydney K Paul">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="R Markdowntitle: Test Websiteauthor: Sydney K Paul date: ‘2019-06-27’ categories: - R tags: - plot - R Markdown - regression
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
+You can embed an R code chunk like this:
+summary(cars)## speed dist ## Min.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="/post/2019-06-27-r-rmarkdown/">
+
+  
+
+
+  
+
+  
+  
+  
+  <meta name="theme-color" content="#3f51b5">
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+
+    
+
+  
+
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:400,400italic,700|Roboto+Mono&display=swap">
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.min.635ab0d5d2721ba7ab9d921dd29af860.css">
+
+  
+
+  
+  
+  
+
+  
+
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="/post/2019-06-27-r-rmarkdown/">
+
+  
+  
+  
+  
+    
+    
+  
+  <meta property="twitter:card" content="summary">
+  
+  <meta property="og:site_name" content="Sydney K Paul">
+  <meta property="og:url" content="/post/2019-06-27-r-rmarkdown/">
+  <meta property="og:title" content="Plotly test post | Sydney K Paul">
+  <meta property="og:description" content="R Markdowntitle: Test Websiteauthor: Sydney K Paul date: ‘2019-06-27’ categories: - R tags: - plot - R Markdown - regression
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
+You can embed an R code chunk like this:
+summary(cars)## speed dist ## Min."><meta property="og:image" content="/img/icon-192.png">
+  <meta property="twitter:image" content="/img/icon-192.png"><meta property="og:locale" content="en-us">
+  
+  <meta property="article:published_time" content="2015-07-23T21:13:14-05:00">
+  
+  <meta property="article:modified_time" content="2015-07-23T21:13:14-05:00">
+  
+
+  
+
+
+  
+
+
+
+
+
+  <title>Plotly test post | Sydney K Paul</title>
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" role="textbox" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0" id="navbar-main">
+  <div class="container">
+
+    
+      <a class="navbar-brand" href="/">Sydney K Paul</a>
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+    
+    <div class="collapse navbar-collapse" id="navbar">
+
+      
+      
+      <ul class="navbar-nav ml-auto">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/posts/"><span>Posts</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/projects/"><span>Projects</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/publications/"><span>Publications</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/about/"><span>About</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/contact/"><span>Contact</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
+        </li>
+        
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+  <article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1 itemprop="name">Plotly test post</h1>
+
+  
+
+  
+    
+
+
+
+<meta content="2015-07-23 21:13:14 -0500 -0500" itemprop="datePublished">
+<meta content="2015-07-23 21:13:14 -0500 -0500" itemprop="dateModified">
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    <time>Jul 23, 2015</time>
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    1 min read
+  </span>
+  
+
+  
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder"></i>
+    <a href="/categories/r/">R</a></span>
+  
+
+  
+    
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=/post/2019-06-27-r-rmarkdown/&amp;text=Plotly%20test%20post" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=/post/2019-06-27-r-rmarkdown/&amp;t=Plotly%20test%20post" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=Plotly%20test%20post&amp;body=/post/2019-06-27-r-rmarkdown/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=/post/2019-06-27-r-rmarkdown/&amp;title=Plotly%20test%20post" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://web.whatsapp.com/send?text=Plotly%20test%20post%20/post/2019-06-27-r-rmarkdown/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=/post/2019-06-27-r-rmarkdown/&amp;title=Plotly%20test%20post" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style" itemprop="articleBody">
+      
+<script src="/rmarkdown-libs/htmlwidgets/htmlwidgets.js"></script>
+<script src="/rmarkdown-libs/plotly-binding/plotly.js"></script>
+<script src="/rmarkdown-libs/typedarray/typedarray.min.js"></script>
+<script src="/rmarkdown-libs/jquery/jquery.min.js"></script>
+<link href="/rmarkdown-libs/crosstalk/css/crosstalk.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/crosstalk/js/crosstalk.min.js"></script>
+<link href="/rmarkdown-libs/plotly-htmlwidgets-css/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/plotly-main/plotly-latest.min.js"></script>
+
+
+<div id="r-markdowntitle-test-website" class="section level1">
+<h1>R Markdowntitle: Test Website</h1>
+<p>author: Sydney K Paul date: ‘2019-06-27’ categories: - R tags: - plot - R Markdown - regression</p>
+<p>This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <a href="http://rmarkdown.rstudio.com" class="uri">http://rmarkdown.rstudio.com</a>.</p>
+<p>You can embed an R code chunk like this:</p>
+<pre class="r"><code>summary(cars)
+##      speed           dist       
+##  Min.   : 4.0   Min.   :  2.00  
+##  1st Qu.:12.0   1st Qu.: 26.00  
+##  Median :15.0   Median : 36.00  
+##  Mean   :15.4   Mean   : 42.98  
+##  3rd Qu.:19.0   3rd Qu.: 56.00  
+##  Max.   :25.0   Max.   :120.00
+fit &lt;- lm(dist ~ speed, data = cars)
+fit
+## 
+## Call:
+## lm(formula = dist ~ speed, data = cars)
+## 
+## Coefficients:
+## (Intercept)        speed  
+##     -17.579        3.932</code></pre>
+</div>
+<div id="including-plots" class="section level1">
+<h1>Including Plots</h1>
+<p>You can also embed plots. See Figure <a href="#fig:pie">1</a> for example:</p>
+<pre class="r"><code>par(mar = c(0, 1, 0, 1))
+pie(
+  c(280, 60, 20),
+  c(&#39;Sky&#39;, &#39;Sunny side of pyramid&#39;, &#39;Shady side of pyramid&#39;),
+  col = c(&#39;#0292D8&#39;, &#39;#F7EA39&#39;, &#39;#C4B632&#39;),
+  init.angle = -50, border = NA
+)</code></pre>
+<div class="figure"><span id="fig:pie"></span>
+<img src="/post/2019-06-27-r-rmarkdown_files/figure-html/pie-1.png" alt="A fancy pie chart." width="672" />
+<p class="caption">
+Figure 1: A fancy pie chart.
+</p>
+</div>
+<p>PLOTLY?!??!?!</p>
+<pre class="r"><code>plotly::plot_ly(midwest, x = ~percollege, color = ~state, type = &quot;box&quot;)</code></pre>
+<div id="htmlwidget-1" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1">{"x":{"visdat":{"6a6873c82b59":["function () ","plotlyVisDat"]},"cur_data":"6a6873c82b59","attrs":{"6a6873c82b59":{"x":{},"color":{},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"box"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"xaxis":{"domain":[0,1],"automargin":true,"title":"percollege"},"yaxis":{"domain":[0,1],"automargin":true},"hovermode":"closest","showlegend":true},"source":"A","config":{"showSendToCloud":false},"data":[{"fillcolor":"rgba(102,194,165,0.5)","x":[19.6313918,11.2433076,17.0338194,17.2789539,14.475999,18.9046238,11.9173877,16.1971209,14.1076487,41.2958081,13.567226,15.1108627,13.6830103,15.3874693,25.1750412,28.0181167,16.9858076,14.5978891,32.835928,16.1959601,16.8685259,42.7688669,16.8399327,16.9356446,20.2751964,13.6029941,17.8273561,14.7056662,15.5321976,11.3675214,13.0495464,18.3778784,14.0467657,20.6605223,14.3184422,13.7735504,18.7236334,15.1666829,36.6436653,15.0256035,18.3698955,14.7583093,16.4133528,14.3524363,27.5938834,17.6409622,24.8893485,19.3436365,37.8340529,16.8995267,14.5388128,18.476678,14.5031437,17.9492226,27.9280239,28.0541488,33.8185507,19.8618556,14.0083929,19.6994744,16.4493851,17.5348837,13.5054525,14.034565,18.511502,16.4744211,19.9206186,11.723732,20.7244228,15.7185951,18.7793745,25.838414,13.5622441,22.011857,12.1742809,14.2502659,14.3687708,16.5212794,12.7412789,21.5077402,21.3007289,21.184251,15.4883463,28.9881549,14.6365422,13.0760986,15.9511699,16.8789809,19.8795753,20.0448263,17.8795898,17.0571729,24.7300469,20.4582651,15.9600242,15.6807027,15.9287398,16.5530497,24.7568609,21.0595616,22.652364,22.8052176],"type":"box","orientation":"h","name":"IL","marker":{"color":"rgba(102,194,165,1)","line":{"color":"rgba(102,194,165,1)"}},"line":{"color":"rgba(102,194,165,1)"},"xaxis":"x","yaxis":"y","frame":null},{"fillcolor":"rgba(252,141,98,0.5)","x":[16.1156797,27.3597862,22.8468145,13.4643978,12.9819635,27.8306241,19.8002103,15.4562536,13.2149823,16.8123574,14.1137248,16.045283,8.54375099,13.2391267,15.5742757,13.9213675,15.581854,21.1970145,17.1676628,18.3723425,11.4249881,20.5498928,11.1452991,12.9935988,13.929867,15.50432,15.5381671,14.9522958,42.1311499,20.4899394,13.1074407,24.2200345,13.2576823,20.2298144,16.9731386,13.1423129,14.8558462,12.771798,17.5460903,10.1458975,22.308069,19.9757478,19.2629151,11.1118012,17.6686138,17.1792531,13.1476522,16.401998,26.7446886,17.7775263,13.5396226,14.4075703,37.7422954,16.9252277,14.6798142,12.1746236,12.6387629,10.7029216,9.78827088,11.1649179,14.6129001,11.0422948,13.842852,24.455887,17.2106825,14.1710559,15.734664,12.6200972,13.5281456,12.8463697,24.611669,10.5895865,14.7000195,14.1338236,10.0140252,18.6080204,15.4816696,9.47158524,36.2454446,15.4219389,12.6449852,21.7585174,12.2726866,22.7230118,16.0805162,13.399963,23.8155668,10.8145974,15.5891252,18.5655038,16.5838347,15.809776],"type":"box","orientation":"h","name":"IN","marker":{"color":"rgba(252,141,98,1)","line":{"color":"rgba(252,141,98,1)"}},"line":{"color":"rgba(252,141,98,1)"},"xaxis":"x","yaxis":"y","frame":null},{"fillcolor":"rgba(141,160,203,0.5)","x":[14.1150923,16.2755866,18.0660208,18.9337962,19.039803,11.8278471,14.5760743,17.2519754,18.2258245,21.4208568,23.742011,16.066702,21.4885192,15.8443516,22.6527251,14.6477089,16.9397657,12.0419487,22.8647363,18.7787018,18.912404,20.4206544,26.9787819,26.8725681,20.1454244,11.4331387,21.1730815,30.9753249,16.4441292,16.4684698,24.7650877,14.3082727,36.7600619,15.116835,16.2342399,15.4575777,27.2497358,21.2057826,34.5571857,11.4555097,28.6383762,14.4522145,11.3134379,16.1542355,32.5963872,18.7880617,27.5866359,14.4056678,15.2878703,20.6866911,16.2528217,26.763554,18.5401286,25.0460405,15.084171,35.6088365,13.280021,17.4296096,14.160017,13.4575569,19.0433213,15.6946934,36.9635114,16.9024096,11.6568382,15.9567602,13.6658394,12.9210381,20.0211305,26.9656935,13.8933764,13.363353,19.7081294,17.641192,17.0117257,13.7970398,14.5667198,17.2912268,14.1243101,17.8047443,48.0785102,19.4104036,18.2322106],"type":"box","orientation":"h","name":"MI","marker":{"color":"rgba(141,160,203,1)","line":{"color":"rgba(141,160,203,1)"}},"line":{"color":"rgba(141,160,203,1)"},"xaxis":"x","yaxis":"y","frame":null},{"fillcolor":"rgba(231,138,195,0.5)","x":[8.74173036,17.3660604,17.2669455,13.2435395,29.1494085,16.1764706,14.1576729,11.4336901,24.2252343,11.323289,13.9121748,17.784992,19.6893454,15.7631208,13.0905778,11.6793426,14.258027,25.0853882,13.475094,18.1881619,31.5940573,18.7380268,21.0773874,11.8740898,32.204593,16.4765579,14.9341366,31.6279977,31.956732,13.5143719,29.7883109,24.4504965,16.0309861,10.5537945,15.2589751,12.3112711,12.85435,9.33070866,13.4497842,10.9845318,13.8431503,16.771139,23.6828055,12.2083684,18.1793685,13.3233757,18.8616572,23.5504285,13.3788082,18.1757973,15.0270375,23.7026065,11.677498,14.1000841,19.2777119,10.513927,26.5504804,11.3808463,12.1051405,15.3234543,8.84588804,19.338309,11.4884393,10.1076709,13.0943276,12.4445328,21.8818751,11.233264,15.7080088,16.7975615,14.1156575,16.2824097,13.7772608,15.6221022,17.3762105,18.9896041,24.7331393,15.5998451,13.0834179,16.9825108,15.1100169,7.91325578,24.4193518,19.0096756,18.4454309,14.4987147,29.0951102,13.7107444],"type":"box","orientation":"h","name":"OH","marker":{"color":"rgba(231,138,195,1)","line":{"color":"rgba(231,138,195,1)"}},"line":{"color":"rgba(231,138,195,1)"},"xaxis":"x","yaxis":"y","frame":null},{"fillcolor":"rgba(166,216,84,0.5)","x":[12.4274917,18.3200156,19.425147,25.8228923,26.2931785,17.9412424,13.6760641,19.7803247,18.1533363,13.84631,20.852313,16.599469,43.6264509,15.9254638,22.4883413,20.9940872,26.2870159,29.8544673,15.6035329,20.8318653,13.5699001,21.6803841,19.8751776,17.3050671,20.483251,18.7317293,15.3240741,22.1656323,14.3912738,20.3282422,14.3909586,30.4885126,16.4620371,13.6317946,17.4417943,19.0711481,21.877375,15.4275441,14.0016473,7.33610822,25.3558337,17.3724213,13.4311741,21.9338239,24.8578251,37.4197798,15.7492355,24.464372,18.5920497,24.6343275,15.527175,22.9065131,17.4993368,19.9064402,16.7559769,28.5880867,19.833921,17.9479167,14.8077953,20.8371926,15.0650908,17.5516579,18.9421311,19.2118611,23.1569039,19.0168872,23.3909001,35.3967841,16.5498688,15.064584,24.9955036,21.6663817],"type":"box","orientation":"h","name":"WI","marker":{"color":"rgba(166,216,84,1)","line":{"color":"rgba(166,216,84,1)"}},"line":{"color":"rgba(166,216,84,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+first code snippet
+<script type="text/javascript">
+$('.title').css('color', 'red')
+</script>
+second
+<script type="text/javascript">
+
+</script>
+<script url="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/basic.css"></script>
+<script url="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/dropzone-amd-module.js"></script>
+<script url="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/dropzone.css"></script>
+<form action="/file-upload" class="dropzone" id="my-awesome-dropzone">
+</form>
+<style>
+.dropzone {
+width: 100px;
+height: 100px;
+min-height: 0px !important;
+}   
+</style>
+</div>
+
+    </div>
+
+    
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tags/r-markdown/">R Markdown</a>
+  
+  <a class="badge badge-light" href="/tags/plot/">plot</a>
+  
+  <a class="badge badge-light" href="/tags/regression/">regression</a>
+  
+</div>
+
+
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+  
+  
+    
+  
+  
+  <div class="media author-card" itemscope itemtype="http://schema.org/Person">
+    
+      
+      <img class="portrait mr-3" src="/authors/admin/avatar_hu81be83a662f1223ef3510ae41c9792d9_3832698_250x250_fill_q90_lanczos_center.jpg" itemprop="image" alt="Avatar">
+    
+
+    <div class="media-body">
+      <h5 class="card-title" itemprop="name"><a href="/">Sydney K Paul</a></h5>
+      <h6 class="card-subtitle">Data Science Intern</h6>
+      <p class="card-text" itemprop="description">Data Science Intern at Seattle Children&rsquo;s Hospital Research Institute. Graduate student at the University of Notre Dame studying Data Science.</p>
+      <ul class="network-icon" aria-hidden="true">
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="/contact/" >
+              <i class="fas fa-envelope"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://www.linkedin.com/in/sydneykpaul/" target="_blank" rel="noopener">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://github.com/sydneykpaul/" target="_blank" rel="noopener">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+
+
+      
+      
+      <div class="article-widget">
+        <div class="hr-light"></div>
+        <h3>Related</h3>
+        <ul>
+          
+          <li><a href="/post/2019-06-27-r-rmarkdown3/">Hello R Markdown</a></li>
+          
+          <li><a href="/post/2015-07-23-r-rmarkdown/">Hello R Markdown</a></li>
+          
+          <li><a href="/post/2019-06-27-r-rmarkdown1/">Hello R Markdown</a></li>
+          
+          <li><a href="/post/2019-06-27-r-rmarkdown4/">Hello R Markdown</a></li>
+          
+          <li><a href="/post/2019-06-27-r-rmarkdown2/">Hello R Markdown</a></li>
+          
+        </ul>
+      </div>
+      
+    
+
+    
+
+    
+
+
+  </div>
+</article>
+
+      
+
+    
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js" integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin="anonymous"></script>
+        
+      
+
+      
+      
+    
+
+    
+    
+
+    
+    
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script>
+      const search_index_filename = "/index.json";
+      const i18n = {
+        'placeholder': "Search...",
+        'results': "results found",
+        'no_results': "No results found"
+      };
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.f1a21f988a77cdbdeeb2f60c710009d1.js"></script>
+
+    
+
+
+
+
+
+
+  
+  <div class="container">
+    <footer class="site-footer">
+  
+  <p class="powered-by">
+    <a href="/privacy/">Privacy Policy</a>
+  </p>
+  
+
+  <p class="powered-by">
+    &copy; Sydney K Paul 2019 &middot; 
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" id="back_to_top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
+</footer>
+
+  </div>
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
